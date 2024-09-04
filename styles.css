@@ -1,0 +1,352 @@
+/* Font and Global Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #dcdcdc; /* Light gray text for better contrast */
+  background-color: #1c1c1c; /* Dark background */
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+h2 {
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #6fbf73; /* Muted green */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #6fbf73; /* Muted green */
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #1c1c1c;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1; /* Keep the content in front of the canvas */
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    color: #6fbf73;
+    margin-top: 20px;
+  }
+  
+  .btn-primary {
+    background-color: #6fbf73;
+    border: none;
+    color: #ffffff;
+    padding: 12px 40px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #e0b084;
+    transform: translateY(-2px);
+  }
+  
+  /* Canvas for Floating Circles */
+  #heroCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Behind the hero content */
+    display: block;
+  }
+  
+
+/* About Section */
+#about {
+  background-color: #2e2e2e; /* Dark gray for section background */
+  color: #dcdcdc;
+  padding: 60px 0;
+}
+
+#about p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #bfbfbf; /* Slightly lighter text */
+}
+
+/* Skills Section */
+#skills {
+  background-color: #1c1c1c; /* Deep background for contrast */
+  padding: 60px 0;
+}
+
+#skills h4 {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #6fbf73; /* Muted green */
+}
+
+#skills i {
+  color: #e0b084; /* Warm beige */
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+#skills i:hover {
+  transform: scale(1.1);
+}
+
+/* Projects Section */
+#projects {
+  background-color: #2e2e2e;
+  padding: 60px 0;
+}
+
+.project-card {
+  margin-bottom: 30px;
+  background-color: #3a3a3a; /* Lighter gray for cards */
+  border: 1px solid #4d4d4d; /* Subtle borders */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+}
+
+.project-card h5 {
+  color: #6fbf73; /* Muted green */
+  font-weight: 600;
+  padding: 20px;
+}
+
+.project-card p {
+  color: #bfbfbf;
+  padding: 0 20px 20px;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #1c1c1c;
+  color: #dcdcdc;
+  padding: 60px 0;
+}
+
+#contact h2 {
+  color: #6fbf73; /* Muted green */
+}
+
+.contact-input {
+  background-color: #2e2e2e;
+  border: 1px solid #4d4d4d;
+  color: #dcdcdc;
+  padding: 12px 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
+
+.contact-input:focus {
+  border-color: #6fbf73; /* Muted green */
+  box-shadow: 0 0 8px rgba(111, 191, 115, 0.2);
+  outline: none;
+}
+
+.contact-input::placeholder {
+  color: #999999;
+}
+
+#contact .btn-primary {
+  padding: 12px 40px;
+  border-radius: 8px;
+  background-color: #6fbf73; /* Muted green */
+  color: #ffffff;
+}
+
+#contact .btn-primary:hover {
+  background-color: #e0b084; /* Warm beige */
+  color: #ffffff;
+}
+
+/* Footer */
+footer {
+  background-color: #1c1c1c;
+  color: #dcdcdc;
+  padding: 30px 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer p a {
+  color: #6fbf73; /* Muted green */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer p a:hover {
+  color: #e0b084; /* Warm beige */
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Media Queries for mobile */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .btn-primary {
+    padding: 10px 25px;
+  }
+
+  #about p {
+    font-size: 1.1rem;
+  }
+
+  .project-card h5 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Media Queries for tablets and smaller screens */
+@media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero-content p {
+      font-size: 1.1rem;
+    }
+  
+    .btn-primary {
+      padding: 10px 25px;
+    }
+  
+    #about p {
+      font-size: 1.1rem;
+    }
+  
+    .project-card h5 {
+      font-size: 1.4rem;
+    }
+  
+    #contact h2 {
+      font-size: 2.2rem;
+    }
+  
+    footer p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Media Queries for mobile (max-width: 480px) */
+  @media (max-width: 480px) {
+    /* Adjust Hero Section */
+    .hero-content h1 {
+      font-size: 1.8rem;
+    }
+  
+    .hero-content p {
+      font-size: 0.9rem;
+    }
+  
+    .btn-primary {
+      padding: 8px 20px;
+      font-size: 1rem;
+    }
+  
+    /* Adjust About Section */
+    #about p {
+      font-size: 1rem;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  
+    /* Adjust Skills Section */
+    #skills h2 {
+      font-size: 2rem;
+    }
+  
+    #skills h4 {
+      font-size: 1.2rem;
+    }
+  
+    #skills i {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+  
+    /* Adjust Project Section */
+    #projects h2 {
+      font-size: 2rem;
+    }
+  
+    .project-card h5 {
+      font-size: 1.2rem;
+    }
+  
+    .project-card p {
+      font-size: 0.9rem;
+    }
+  
+    /* Adjust Contact Section */
+    #contact h2 {
+      font-size: 2rem;
+    }
+  
+    .contact-input {
+      padding: 10px 15px;
+      font-size: 0.9rem;
+    }
+  
+    #contact .btn-primary {
+      padding: 10px 30px;
+      font-size: 1rem;
+    }
+  
+    /* Adjust Footer */
+    footer p {
+      font-size: 0.8rem;
+    }
+  }
+  
